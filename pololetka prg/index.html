@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>User Registration App</title>
+</head>
+<body>
+
+  <div class="container">
+    <div id="menu">
+      <button onclick="showRegistrationForm()">Registrace</button>
+      <button onclick="showLogin()">Přihlášení</button>
+      <button onclick="showUserList()">Výpis</button>
+    </div>
+
+    <div id="registrationForm" style="display:none;">
+      <h2>Registrace</h2>
+      <form id="userRegistrationForm">
+        Jméno: <input type="text" id="name" required><br>
+        Příjmení: <input type="text" id="surname" required><br>
+        Uživatelské jméno: <input type="text" id="username" required><br>
+        Heslo: <input type="password" id="password" required><br>
+        Věk: <input type="number" id="age" required><br>
+        Pohlaví: <select id="gender" required>
+          <option value="male">Muž</option>
+          <option value="female">Žena</option>
+        </select><br>
+        Status: <input type="checkbox" id="status" checked> Aktivní<br>
+        <button type="button" onclick="registerUser()">Registrovat</button>
+      </form>
+    </div>
+
+    <div id="loginForm" style="display:none;">
+      <h2>Přihlášení</h2>
+      <form id="userLoginForm">
+        Uživatelské jméno: <input type="text" id="loginUsername" required><br>
+        Heslo: <input type="password" id="loginPassword" required><br>
+        <button type="button" onclick="loginUser()">Přihlásit</button>
+      </form>
+    </div>
+
+    <div id="userList" style="display:none;">
+      <h2>Seznam uživatelů</h2>
+      <div id="userOutput"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</body>
+</html>
